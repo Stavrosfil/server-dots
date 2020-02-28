@@ -84,6 +84,7 @@ alias cd="custom_cd"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export PATH="$PATH:/usr/sbin"
 export PATH="$HOME/tools/cubemx/STM32CubeMX/:$PATH"
 export PATH="$HOME/tools/android-studio/bin:$PATH"
 export PATH="$HOME/tools/flutter/bin:$PATH"

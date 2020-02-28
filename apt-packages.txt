@@ -2,4 +2,5 @@ git
 curl
 zsh
 docker
-
+docker-compose
+tmux
