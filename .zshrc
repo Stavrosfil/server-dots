@@ -161,3 +161,7 @@ za() {
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
         tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 fi
+
+# Fix repeating characters on tab completion
+export LC_ALL="en_US.UTF-8"
+
