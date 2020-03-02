@@ -159,8 +159,10 @@ za() {
 
 # Automatically start a tmux session when connecting with SSH
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-        tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+        tmux -u attach-session -t ssh_tmux || tmux -u new-session -s ssh_tmux
 fi
+
+alias tmux="tmux -u"
 
 # Fix repeating characters on tab completion
 export LC_ALL="en_US.UTF-8"
