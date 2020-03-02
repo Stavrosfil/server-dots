@@ -157,4 +157,7 @@ za() {
     kill $PPID
 }
 
-# . $HOME/esp/esp-idf/export.sh
+# Automatically start a tmux session when connecting with SSH
+if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+        tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
