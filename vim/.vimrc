@@ -22,7 +22,7 @@ set wildmenu
 set wildmode=longest:full,full
 
 " Command line height.
-set cmdheight=2
+set cmdheight=1
 
 " Use relative number lines.
 set relativenumber
@@ -133,19 +133,25 @@ Plug 'scrooloose/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'sonph/onehalf'
 Plug 'ntk148v/vim-horizon'
+Plug 'arcticicestudio/nord-vim'
+Plug 'vim-airline/vim-airline'
 
 " Initialize plug system.
 call plug#end()
 
 " Enable true colors
-if exists('+termguicolors')
-	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-	set termguicolors
-endif
+"if exists('+termguicolors')
+"	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"	set termguicolors
+"endif
 
-colorscheme 	horizon
+"set background=dark
+"set t_Co=256
+
+"colorscheme 	horizon
 "colorscheme 	halfdark
+colorscheme		nord
 
 " Use Control + n to toggle the directories.
 map <C-n> :NERDTreeToggle<CR>

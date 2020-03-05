@@ -98,6 +98,7 @@ export IDF_PATH="$HOME/esp/ESP8266_RTOS_SDK"
 export TERM=xterm-256color
 # export TERM=xterm-kitty
 # export TERM=xterm
+export INFLUXDB_CONFIG_PATH="$HOME/config/influxdb.conf"
 
 # Aliases
 alias cl="clear"
