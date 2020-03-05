@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 # export ZSH="$HOME/.oh-my-zsh"
 
-source $HOME/dotfiles/antigen.zsh
+source $HOME/server-dots/antigen.zsh
 
 # Export sync script thingy
 export already_setup=true

@@ -1,13 +1,15 @@
 #!/bin/bash
 
+cd $HOME
+
 # Install packages from a file, and remove all the comments inside!
 sudo apt install $(grep -vE "^\s*#" apt-packages.txt | tr "\n" " ")
 
 # Install antigen for zsh
-curl -L git.io/antigen >antigen.zsh
+curl -L git.io/antigen > antigen.zsh
 
 # Dotfiles location
-DOTS="$HOME/dotfiles"
+DOTS="$HOME/server-dots"
 
 # Make zsh default
 chsh -s $(which zsh)
@@ -22,13 +24,13 @@ rm -rf .scripts .zshrc .vimrc
 cd .config
 rm -rf .vim ranger
 
-if [ -d "$DOTS" ]; then
-	cd $DOTS
-	git pull origin master
-else
-	echo "Cloning repo..."
-	git clone https://github.com/stavrosfil/dotfiles
-fi
+#if [ -d "$DOTS" ]; then
+#	cd $DOTS
+#	git pull origin master
+#else
+#	echo "Cloning repo..."
+#	git clone https://github.com/stavrosfil/dotfiles
+#fi
 
 
 # Symbolic links!
