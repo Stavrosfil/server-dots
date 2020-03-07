@@ -20,7 +20,7 @@ chsh -s $(which zsh)
 echo "Setting up repos directories"
 
 cd $HOME
-rm -rf .scripts .zshrc .vimrc
+rm -rf .scripts .zshrc .vimrc .tmux.conf
 cd .config
 rm -rf .vim ranger
 
@@ -38,6 +38,7 @@ ln -sv $DOTS/ranger $HOME/.config
 ln -sv $DOTS/vim/.vim $HOME/.config/
 ln -sv $DOTS/vim/.vimrc $HOME/
 ln -sv $DOTS/.zshrc $HOME/
+ln -sv $DOTS/.tmux.conf $HOME/
 
 #fi
 
